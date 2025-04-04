@@ -10,15 +10,15 @@ import { toast } from "sonner";
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      toast({
-        title: "Message sent!",
+      toast(
+        "Message sent!",{
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
       e.target.reset();

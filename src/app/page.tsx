@@ -20,11 +20,11 @@ import { JSX } from "react/jsx-dev-runtime";
 export default function Portfolio() {
   return (
     <div className="flex min-h-screen flex-col align-center">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex justify-center">
-        <div className="container flex h-16 items-center justify-between">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 ">
+        <div className="container flex h-16 items-center justify-between mx-auto px-4 md:px-6">
           <Link href="/" className="flex items-center gap-2 font-bold">
             <User className="h-5 w-5" />
-            <span>YourName</span>
+            <span>Elton Escudero</span>
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link
@@ -67,7 +67,7 @@ export default function Portfolio() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Creative Developer & Designer
+                    Creative Developer <br />& Designer
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     I build exceptional digital experiences that combine
@@ -88,7 +88,7 @@ export default function Portfolio() {
                 </div>
               </div>
               <Image
-                src="/placeholder.svg?height=550&width=450"
+                src="/Hero.jpg?height=550&width=450"
                 width={550}
                 height={450}
                 alt="Hero Image"
@@ -104,7 +104,7 @@ export default function Portfolio() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg px-3 py-1 text-sm bg-secondary text-secondary-foreground">
                   About Me
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -149,7 +149,7 @@ export default function Portfolio() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">
                   Portfolio
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -163,11 +163,10 @@ export default function Portfolio() {
             </div>
             <div className="mx-auto max-w-5xl py-12">
               <Tabs defaultValue="all" className="w-full">
-                <TabsList className="grid w-full grid-cols-4">
+                <TabsList className="grid grid-cols-3 mx-auto w-[60%]">
                   <TabsTrigger value="all">All</TabsTrigger>
                   <TabsTrigger value="web">Web</TabsTrigger>
                   <TabsTrigger value="design">Design</TabsTrigger>
-                  <TabsTrigger value="app">Apps</TabsTrigger>
                 </TabsList>
                 <TabsContent value="all" className="mt-6">
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -258,17 +257,6 @@ export default function Portfolio() {
                     />
                   </div>
                 </TabsContent>
-                <TabsContent value="app" className="mt-6">
-                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <ProjectCard
-                      title="Mobile Fitness App"
-                      description="Workout tracking app with personalized recommendations."
-                      image="/placeholder.svg?height=300&width=400"
-                      tags={["React Native", "GraphQL", "AWS"]}
-                      link="#"
-                    />
-                  </div>
-                </TabsContent>
               </Tabs>
             </div>
           </div>
@@ -280,7 +268,7 @@ export default function Portfolio() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">
                   Expertise
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -335,7 +323,7 @@ export default function Portfolio() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">
                   Contact
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -385,7 +373,7 @@ export default function Portfolio() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t py-6 md:py-0">
+      <footer className="w-full border-t py-6 md:py-0 px-4 md:px-6">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row mx-auto">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Elton. All rights reserved.
