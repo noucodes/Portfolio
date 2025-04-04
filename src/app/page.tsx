@@ -19,8 +19,8 @@ import { JSX } from "react/jsx-dev-runtime";
 
 export default function Portfolio() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="flex min-h-screen flex-col align-center">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex justify-center">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold">
             <User className="h-5 w-5" />
@@ -52,31 +52,17 @@ export default function Portfolio() {
               Contact
             </Link>
           </nav>
-          <div className="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
+          <div className="flex items-center w-fit gap-4 md:ml-2 md:gap-2 lg:gap-4">
             <ThemeToggle />
-            <Button
-              variant="ghost"
-              size="icon"
-              className="rounded-full ml-auto"
-            >
-              <Image
-                src="/placeholder.svg?height=32&width=32"
-                width="32"
-                height="32"
-                className="rounded-full border"
-                alt="Avatar"
-              />
-              <span className="sr-only">Toggle user menu</span>
+            <Button asChild size="sm">
+              <Link href="#contact">Hire Me</Link>
             </Button>
           </div>
-          <Button asChild size="sm">
-            <Link href="#contact">Hire Me</Link>
-          </Button>
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 ">
+          <div className="container px-4 md:px-6 mx-auto">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -115,7 +101,7 @@ export default function Portfolio() {
           id="about"
           className="w-full py-12 md:py-24 lg:py-32 bg-muted/40"
         >
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
@@ -160,7 +146,7 @@ export default function Portfolio() {
           </div>
         </section>
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
@@ -291,7 +277,7 @@ export default function Portfolio() {
           id="skills"
           className="w-full py-12 md:py-24 lg:py-32 bg-muted/40"
         >
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
@@ -346,7 +332,7 @@ export default function Portfolio() {
           </div>
         </section>
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
@@ -372,16 +358,16 @@ export default function Portfolio() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5" />
-                    <span>hello@yourname.com</span>
+                    <span>escudero.elton@gmail.com</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Github className="h-5 w-5" />
                     <Link
-                      href="https://github.com/yourusername"
+                      href="https://github.com/noucodes"
                       className="hover:underline"
                       target="_blank"
                     >
-                      github.com/yourusername
+                      github.com/noucodes
                     </Link>
                   </div>
                 </div>
@@ -400,9 +386,9 @@ export default function Portfolio() {
         </section>
       </main>
       <footer className="w-full border-t py-6 md:py-0">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
+        <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row mx-auto">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} YourName. All rights reserved.
+            © {new Date().getFullYear()} Elton. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link
