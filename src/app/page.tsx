@@ -88,7 +88,7 @@ export default function Portfolio() {
                 </div>
               </div>
               <Image
-                src="/Hero.jpg?height=550&width=450"
+                src="/placehorder.svg?height=550&width=450"
                 width={550}
                 height={450}
                 alt="Hero Image"

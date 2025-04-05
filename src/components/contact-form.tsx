@@ -17,8 +17,7 @@ export default function ContactForm() {
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      toast(
-        "Message sent!",{
+      toast("Message sent!", {
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
       e.target.reset();
